@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { saveQuiz } from "../utils/localStorage";
-import "../styles/spaceXTheme.css";
 
 // Fisher-Yates shuffle function
 function shuffle(array) {
@@ -59,19 +58,19 @@ export default function Quiz() {
   };
 
   return (
-    <div className="quiz-bg">
-      <h2 dangerouslySetInnerHTML={{ __html: q.question }} />
-      <div className="options">
+    <div className="min-h-screen flex flex-col items-center justify-center text-White font-orbitron p-6 max-w-3xl mx-auto">
+      <h2 className="text-3xl font-bold mb-10" dangerouslySetInnerHTML={{ __html: q.question }} />
+      <div className="grid grid-cols-1 gap-6 w-full">
         {q.options.map(opt => (
           <button
             key={opt}
-            className="quiz-btn"
+            className="bg-transparent text-white border border-white px-6 py-3 text-xl transition duration-300 hover:bg-white hover:text-black hover:border-white-600"
             onClick={() => handleAnswer(opt)}
             dangerouslySetInnerHTML={{ __html: opt }}
           />
         ))}
       </div>
-      <span className="progress">
+      <span className="text-White mt-8 text-lg">
         {current + 1} / {questions.length}
       </span>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../styles/spaceXTheme.css";
 
 export default function Result() {
   const { state } = useLocation();

@@ -5,7 +5,8 @@ import CategoryActions from "./components/CategoryActions";
 import Quiz from "./components/Quiz";
 import TrackRecord from "./components/TrackRecord";
 import Result from "./components/Result";
-import "./styles/spaceXTheme.css";
+
+import categoryNames from "./utils/categoryNames.json";
 
 function App() {
   return (
